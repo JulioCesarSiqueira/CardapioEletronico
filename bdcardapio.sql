@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tempo de Geração: Jul 14, 2014 as 07:15 PM
+-- Tempo de Geração: Jul 24, 2014 as 12:43 AM
 -- Versão do Servidor: 5.5.10
 -- Versão do PHP: 5.3.6
 
@@ -16,95 +16,8 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `bdcake`
+-- Banco de Dados: `bdcardapio`
 --
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `carts`
---
-
-CREATE TABLE IF NOT EXISTS `carts` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `product_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `qty` mediumint(8) unsigned NOT NULL DEFAULT '1',
-  `ct_session_id` char(32) NOT NULL,
-  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  KEY `pd_id` (`product_id`),
-  KEY `ct_session_id` (`ct_session_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
-
---
--- Extraindo dados da tabela `carts`
---
-
-INSERT INTO `carts` (`id`, `product_id`, `qty`, `ct_session_id`, `created`) VALUES
-(51, 2, 3, '32cabb9d6fb31404a5b736830eac6aa3', '0000-00-00 00:00:00'),
-(52, 1, 2, '32cabb9d6fb31404a5b736830eac6aa3', '0000-00-00 00:00:00');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `categories`
---
-
-CREATE TABLE IF NOT EXISTS `categories` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `parent_id` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(50) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `cat_parent_id` (`parent_id`),
-  KEY `cat_name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
-
---
--- Extraindo dados da tabela `categories`
---
-
-INSERT INTO `categories` (`id`, `parent_id`, `name`, `description`, `image`) VALUES
-(12, 0, 'Classical', 'From Medieval to Contemporany', ''),
-(13, 17, 'Dizzy Gillespie', 'The Trumpeter Master', ''),
-(14, 12, 'Mozart', 'The Old Favourite', ''),
-(17, 0, 'Jazz', 'Everything from 1890', '');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `departments`
---
-
-CREATE TABLE IF NOT EXISTS `departments` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `region` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
-
---
--- Extraindo dados da tabela `departments`
---
-
-INSERT INTO `departments` (`id`, `name`, `region`) VALUES
-(1, 'Customer Services', 'uk'),
-(2, 'Sales', 'UK'),
-(3, 'Press Office', 'UK'),
-(4, 'Investor Relations', 'US'),
-(5, 'Human Resources', 'NG'),
-(6, 'Parnership Opportunities', 'US'),
-(7, 'Marketing', 'UK'),
-(8, 'Online Marketing', 'US'),
-(9, 'teste', 'teste'),
-(10, 'brazil', 'um pais de tolos'),
-(11, 'oi oi oi ', 'sdss orkut'),
-(12, 'Macaco', 'Pelado'),
-(13, 'Homem', 'Bomba'),
-(14, 'teste', 'macaquinho'),
-(15, 'teste', 'teste'),
-(16, '', '');
 
 -- --------------------------------------------------------
 
@@ -155,38 +68,6 @@ INSERT INTO `pedidos` (`id`, `prato_id`, `qty`, `pd_session_id`, `created`) VALU
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `posts`
---
-
-CREATE TABLE IF NOT EXISTS `posts` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(50) DEFAULT NULL,
-  `body` text,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
-
---
--- Extraindo dados da tabela `posts`
---
-
-INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`) VALUES
-(1, 'The title', 'This is the post body.', '2014-06-03 21:29:48', '2014-06-07 19:17:20'),
-(6, 'ola', 'senhorita', '2014-06-06 20:28:09', '2014-06-06 20:28:09'),
-(7, 'ola', 'mundinho\r\nSem\r\nVergonha\r\n\r\nI''m the king lizzard', '2014-06-06 20:46:14', '2014-06-06 20:46:14'),
-(8, '', '', '2014-06-07 18:32:05', '2014-06-07 18:32:05'),
-(9, 'em branco', '', '2014-06-07 18:32:12', '2014-06-07 18:32:12'),
-(11, 'digitar o tÃ­tulo', 'e digitar o corpo', '2014-06-07 18:46:37', '2014-06-07 18:46:37'),
-(13, 'beethoven', 'nai nai nai nai', '2014-06-09 21:14:57', '2014-06-09 21:14:57'),
-(14, 'acentuaÃ§Ã£o dÃ³ caralhiu', 'cÃ£o de guarda', '2014-07-05 11:04:51', '2014-07-05 11:04:51'),
-(15, 'Ã¡rvores somos nozes ~~~', 'cÃ£o de Ã  crazeado', '2014-07-05 11:15:10', '2014-07-05 11:15:10'),
-(16, 'mÃ´ngo', 'cÃ£o cÃ£o cÃ£o ^~~', '2014-07-05 11:16:12', '2014-07-05 11:16:12'),
-(17, 'teste', 'teste', '2014-07-08 20:27:34', '2014-07-08 20:27:34');
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `pratos`
 --
 
@@ -222,37 +103,6 @@ INSERT INTO `pratos` (`id`, `tipo_id`, `subtipo_id`, `nome`, `descricao`, `preco
 (9, 5, 15, 'Nhoque Vegetariano', 'Nhoque feito com proteína de soja', '29.39', '/img/noimage.png', '/img/noimagethumb.png', NULL, NULL),
 (10, 3, 6, 'File de peixe a milanesa', 'O filé de peixe à milanesa já é uma tradição na cozinha brasileira e as crianças simplesmente adoram. Um prato delicioso, que casa bem com qualquer ocasião.', '16.29', '/img/noimage.png', '/img/noimagethumb.png', NULL, NULL),
 (11, 3, 8, 'Lagosta', 'Uma carne suculenta e deliciosa', '55.00', '/img/noimage.png', '/img/noimagethumb.png', NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `products`
---
-
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `category_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `name` varchar(100) NOT NULL,
-  `description` text NOT NULL,
-  `price` decimal(9,2) NOT NULL DEFAULT '0.00',
-  `qty` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `image` varchar(200) DEFAULT NULL,
-  `thumbnail` varchar(200) DEFAULT NULL,
-  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  KEY `cat_id` (`category_id`),
-  KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
-
---
--- Extraindo dados da tabela `products`
---
-
-INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `price`, `qty`, `image`, `thumbnail`, `created`, `modified`) VALUES
-(1, 13, 'Dizzy 1990s', 'Best of Dizzy', '12.00', 10, NULL, '1.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 14, 'Mozart for lovers', 'relax with your loved ond whith this cd', '15.00', 5, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(22, 13, 'Dizzy and Stan', 'Live with Dizzy Gillespie and Stan Getz', '13.00', 10, NULL, '1.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -314,42 +164,6 @@ INSERT INTO `tipos` (`id`, `nome`, `descricao`, `image`) VALUES
 (3, 'Peixes e Frutos do mar', 'Algumas iguarias deliciosas do mar', '/img/noimagecategoria.png'),
 (4, 'Bebidas', 'De vários tipos, alcoólicas e não alcoólicas, refrescos', '/img/noimagecategoria.png'),
 (5, 'Massas', 'Para quem adora comida italiana e poderoso chefão !', '/img/noimagecategoria.png');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `users`
---
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  `role` varchar(20) DEFAULT NULL,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
-
---
--- Extraindo dados da tabela `users`
---
-
-INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`) VALUES
-(1, 'teste', 'eb7ba4421526862a56f076281f6e52ea7eb4ab56', 'admin', '2014-06-09 21:13:45', '2014-06-09 21:13:45'),
-(2, 'bet', 'cc4607ac143aadd936088646d796731b3b00efaa', 'author', '2014-06-09 21:19:55', '2014-06-09 21:19:55'),
-(3, 'bet', 'cc4607ac143aadd936088646d796731b3b00efaa', 'author', '2014-06-09 21:20:29', '2014-06-09 21:20:29'),
-(4, 'bet', '6b8a40604db7df17f672f60071e79d9154236630', 'author', '2014-06-09 21:23:02', '2014-06-09 21:23:02'),
-(5, 'fome', '1fbeb615e8901094dca1d7dd314d859768fd0b9b', 'admin', '2014-06-09 21:29:24', '2014-06-09 21:29:24'),
-(6, 'teste', 'cefd9070a4773b1d68348ec05b1d70cfed37dbe8', 'admin', '2014-06-09 22:06:47', '2014-06-09 22:06:47'),
-(7, 'teste', '016c84423b9eb31bbb7455a96ba534f663d03336', 'admin', '2014-06-09 22:07:10', '2014-06-09 22:07:10'),
-(8, 'teste', 'c3a666a34a5b76a4d65e6b69d9909e881fb70512', 'admin', '2014-06-09 22:09:39', '2014-06-09 22:09:39'),
-(9, 'teste', 'eb7ba4421526862a56f076281f6e52ea7eb4ab56', 'admin', '2014-06-09 22:10:30', '2014-06-09 22:10:30'),
-(10, 'teste', '94bea0df52376a5ccd22ca339f38335d110386bb', 'admin', '2014-06-09 22:10:44', '2014-06-09 22:10:44'),
-(11, 'teste', 'cf1f2b5e309e08fc953a8202f487e26fb21f80a5', 'admin', '2014-06-09 22:11:05', '2014-06-09 22:11:05'),
-(12, 'teste', '4afb0a4fe0e776fc10dd62f320399d2e46c8d19c', 'admin', '2014-06-09 22:11:55', '2014-06-09 22:11:55'),
-(13, 'teste', '8319cb85f67d670a6381ec8e037c96e3f13b07e5', 'admin', '2014-06-09 22:12:17', '2014-06-09 22:12:17'),
-(14, 'teste', 'a10315f4d55a757da43dde0861747969ea1b606e', 'admin', '2014-06-09 22:15:12', '2014-06-09 22:15:12');
 
 --
 -- Restrições para as tabelas dumpadas

@@ -70,7 +70,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'vertrigo',
-		'database' => 'bdCake',
+		'database' => 'bdcardapio',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
