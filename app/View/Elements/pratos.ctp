@@ -10,7 +10,7 @@ $pratos = $this->requestAction("/pratos/lists/prat:$tipoid/"); //funfando !! *-*
 
 foreach($pratos as $prato){//imprime os dados de todos os pratos da categoria especifica
     ?>
-        <div id="produto_container">
+        <div class="produto_container container-result">
     <?php 
                 //moneta um link com o nome do prato, tipoid e pratoid
                 //o link vai mandar argumentos para PratosController 

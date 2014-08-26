@@ -1,86 +1,144 @@
 
 *{
-    margin: 0;
+    /*margin: 0;
     padding: 0;
-}
-    
-#main_content_container{
-      width: 800px;
-      border: 1px solid gray;
-      margin: 0 auto;
-
-
+    */
 }
 
-
-#header{
-          text-align: center;
+.container{   
+    margin:0 auto; /*cima e baixo=0, direita e esquerda automatica, vai centralizar*/
+    width:940px;
 }
-#header h1{
-    background:	#FF9900;
-    padding: 10px;
-    color: #FFF;
+
+.destaque{
+    margin-top:5px;
+    margin-bottom:5px;            
+        
+}
+
+
+header{
+  
+  
+}
+.cabecalho{
+    background-color:#FF6600;
        
 }
 
-#main_body_container{
-    background: #FFF7D6;
-    margin-bottom: 2px;    
-    margin-top: 2px;    
-    margin-right: 110px;
-    margin-left: 110px;
-    
-    padding: 3px;
-    alignment-adjust: center;
-    font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
-    min-height:500px;
-    position: relative;
 
+#principal{
+    width: 700px;
+    min-height: 450px; 
+    margin-left:15px;
+    float:left;
     
+   
+        
+}
+
+#principal li{
     
+    vertical-align:top;
     
 }
 
-#leftnav{
-    width: 97px;
-    background: #FFCC00;
-    padding: 3px;
+
+/*menu tipos de prato*/
+
+.menu-tipos{
+  
     float: left;
-    margin-top: 3px;
-    }
+    background-color:#D2691E;
+    width: 100px;
+    font-size: 14px;
+    border-radius:4px;
+    box-shadow: 0 0 5px #333; /*sombra*/
+    
+ }
+ .menu-tipos li{
+   background-color:white;
+    margin-bottom:1px; /*coloca um traço suave embaixo dos links */
+    padding:5px 10px;
+ }
+.menu-tipos a{
+    text-decoration:none; /*tira o sublinhado dos links*/
+ }
+ 
+ #conteudo-carrinho h2,
+ .menu-tipos h2{
+   	font-size:16px;
+	text-transform:uppercase;
+	margin-bottom:2px;
+        margin-top:4px;
+        text-align: center;
+        
+       
+     
+ }
+ 
 
-#rightnav{
+#conteudo-carrinho{
     width: 97px;
-    background: #FFCC00;
-    padding: 3px;
+    background-color:#D2691E;
+    padding: 5px;
     float: right;
-    margin-top: 3px;
+    margin-bottom: 5px;
+    border-radius:4px;
+    box-shadow: 0 0 5px #333; /*sombra*/
+}
+
+#conteudo-carrinho p{
+    color:#1F1F1F;
 }
 
 
-#rodape{
-    background:	#FF9900;
+
+
+footer{
+    background:#FF6600;
     padding: 5px;
     text-align: center;
-    color: #FFF;       
+    color: #FFF;     
+    clear:both;
     
 }
 
-#tipo_container{
+.container-result{
     float: left;
-    background: #FF4D4D;
-    margin:1px;
-    width: 49%;
+    margin:0 15px 10px 0;
+    width: 45%;
     height: 100px;
+    padding-left:10px;
+    padding-top:10px;    
+}
+
+ 
+.tipo_container{
+   //background-color:#FFE88F;
+   background:linear-gradient(135deg, #FFE88F, #FF822F);
+   border-radius:8px;
+   
  }
 
- #produto_container{
-    float: left;
-    background: #FFCCCC;
-    margin:1px;
-    width: 49%;
-    height: 100px;
+ .produto_container{
+   background:linear-gradient(135deg, #FFE88F, #FFA86F);
+   border-radius:8px;
+ 
  }
+
+ 
+ 
+ 
+ 
+ h1{
+    font-size: 30px;
+    font-weight:bold;
+    text-transform:uppercase;
+     
+ }
+ 
+ 
  
  //peguei emprestado do CSS padrão do cake
  //preciso editar e retirar o que não usa

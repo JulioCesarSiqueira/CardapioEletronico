@@ -5137,3 +5137,70 @@ Stack Trace:
 #25 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PedidosController), Object(CakeRequest))
 #26 C:\VertrigoServ\www\CardapioVirtual\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #27 {main}
+2014-08-18 11:52:40 Error: [SocketException] SMTP Error: 535 5.7.8 http://support.google.com/mail/bin/answer.py?answer=14257 r8sm7355131yhr.28 - gsmtp
+Request URL: /CardapioVirtual/contas/confirma
+Stack Trace:
+#0 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Network\Email\SmtpTransport.php(199): SmtpTransport->_smtpSend('WFhYWFg=', '235')
+#1 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Network\Email\SmtpTransport.php(96): SmtpTransport->_auth()
+#2 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Network\Email\CakeEmail.php(1130): SmtpTransport->send(Object(CakeEmail))
+#3 C:\VertrigoServ\www\CardapioVirtual\app\Controller\ContasController.php(63): CakeEmail->send('Pratos do pedid...')
+#4 C:\VertrigoServ\www\CardapioVirtual\app\Controller\ContasController.php(33): ContasController->envia(Array, Array)
+#5 [internal function]: ContasController->confirma()
+#6 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContasController), Array)
+#7 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ContasController), Object(CakeRequest))
+#9 C:\VertrigoServ\www\CardapioVirtual\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-22 13:35:11 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\VertrigoServ\www\CardapioVirtual\app\View\Elements\menu.ctp, line 43]
+2014-08-22 13:35:12 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /CardapioVirtual/
+Stack Trace:
+#0 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\VertrigoServ...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\VertrigoServ...', 43, Array)
+#2 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\VertrigoServ...', 43, Array)
+#3 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-22 13:38:33 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\VertrigoServ\www\CardapioVirtual\app\View\Elements\menu.ctp, line 43]
+2014-08-22 13:38:33 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /CardapioVirtual/
+Stack Trace:
+#0 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\VertrigoServ...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\VertrigoServ...', 43, Array)
+#2 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\VertrigoServ...', 43, Array)
+#3 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-26 13:41:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /CardapioVirtual/img/logopng
+Stack Trace:
+#0 C:\VertrigoServ\www\CardapioVirtual\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-26 14:29:49 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\VertrigoServ\www\CardapioVirtual\app\View\Elements\pratos.ctp, line 17]
+2014-08-26 14:29:49 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /CardapioVirtual/pedidos/index/tipo_id:1
+Stack Trace:
+#0 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\VertrigoServ...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\VertrigoServ...', 17, Array)
+#2 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\VertrigoServ...', 17, Array)
+#3 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-26 15:30:24 Error: [SocketException] SMTP Error: 535 5.7.8 http://support.google.com/mail/bin/answer.py?answer=14257 95sm6187406qgm.18 - gsmtp
+Request URL: /CardapioVirtual/contas/confirma
+Stack Trace:
+#0 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Network\Email\SmtpTransport.php(199): SmtpTransport->_smtpSend('WFhYWFg=', '235')
+#1 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Network\Email\SmtpTransport.php(96): SmtpTransport->_auth()
+#2 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Network\Email\CakeEmail.php(1130): SmtpTransport->send(Object(CakeEmail))
+#3 C:\VertrigoServ\www\CardapioVirtual\app\Controller\ContasController.php(63): CakeEmail->send('Pratos do pedid...')
+#4 C:\VertrigoServ\www\CardapioVirtual\app\Controller\ContasController.php(33): ContasController->envia(Array, Array)
+#5 [internal function]: ContasController->confirma()
+#6 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContasController), Array)
+#7 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\VertrigoServ\www\CardapioVirtual\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(ContasController), Object(CakeRequest))
+#9 C:\VertrigoServ\www\CardapioVirtual\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

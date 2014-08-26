@@ -15,7 +15,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         
         <?php
         
-        
+        echo $this->Html->css('cssreset');
         echo $this->Html->css('cssLayoutPrincipalCardapio');
         
         //echo $this->fetch('css');
@@ -24,36 +24,41 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     </head>
     <body>
         
-        <div id="main_content_container">
-        
-            	<div id="header">
-			<h1><?php echo "Cardápio Virtual" ?></h1>
-		</div>
+        <header class="container">
+            <div class="cabecalho">
+               <?php echo $this->Html->image("logo.png", array('alt' => 'CakePHP'));?>
             
-            <div id="leftnav">
-                <?php echo $this->element('menu'); ?>            
-            </div>
-            
-            <div id="rightnav" >
-              <?php echo $this->element('listapedido'); ?>
-            </div>
-            
-            <div id="main_body_container" >
-                <p>
-                    <?php echo $content_for_layout;  ?> 
-                </p>
             </div>
             
             
+        </header>
 
+        <section class="container destaque"> 
+               <section class="menu-tipos">
+                   <nav>
+                        <?php echo $this->element('menu'); ?>            
+                   </nav>
+
+                </section>
+                
+                <section id="principal">
+                    <?php echo $content_for_layout;  ?>     
+                </section>
+                
             
-            <div id="rodape" >
-                <?php echo "Julio Cesar Siqueira - 2014 - Contato: jctsiqueira@gmail.com"; ?>
-            </div>
-        
-        </div>
-           
-        
+                <section id="conteudo-carrinho" >
+                    
+                        <?php echo $this->element('listapedido'); ?>
+                   
+                </section>
+            
+          
+        </section>   
+
+
+        <footer class="container">
+            <?php echo "Julio Cesar Siqueira - 2014 - Contato: jctsiqueira@gmail.com"; ?>
+        </footer>
     </body>
     
 </html>

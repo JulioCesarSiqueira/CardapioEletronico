@@ -1,8 +1,8 @@
+<h2>Pratos do Pedido</h2>
+
+<p>
 <?php
 //exibe o conteudo do carrinho na coluna do lado direito do layout
-
-echo "listinha marota do que comprou =)</br></br>";
-
 //echo $sid;
 //echo "tipoid: $tipoid </br>";
 //echo "pratoid: $pratoid </br>";
@@ -39,4 +39,5 @@ else{
 }
 
 ?>
+</p>
 

@@ -17,7 +17,7 @@
               
               foreach($tipos as $tipo){
                   ?>
-                <div id="tipo_container">
+                <div class="tipo_container container-result">
                     <?php
                     
                      //moneta um link com o nome e id de todas os tipos
